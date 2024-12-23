@@ -1,34 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./output.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./output.css" />
+
+    <title>Frontend Mentor | Body Mass Index Calculator</title>
+  </head>
+
+  <!-- npx tailwindcss -i ./starter-code/input.css -o ./starter-code/output.css --watch -->
+
+  <body class="font-inter-semibold p-4">
+    <header class="flex justify-center">
+      <img
+        class="h-logo-sm w-logo-sm"
+        src="./assets/images/logo.svg"
+        alt="logo of the company"
+      />
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center my-6">
+      <h1 class="text-5xl text-gunmetal font-inter-semibold font-semibold mb-6">
+        Body Mass Index Calculator
+      </h1>
+      <p class="text-base font-regular text-dark-electric-blue px-1 mb-12">
+        Better understand your weight in relation to your height using our body
+        mass index (BM) calculator. While BMI is not the sole determinant of a
+        healthy weight, it offers a valuable starting point to evaluate your
+        overall health and well-being.
+      </p>
+      <!-- Calculator -->
+      <div class="p-6 border-2 border-black">
+        <h2 class="text-2xl text-gunmetal justify-self-start font-inter-semibold font-semibold mb-6">Enter your details below</h2>
+        <form class="flex flex-col gap-6 border-2 border-black">
+
+          <div class="flex gap-6 justify-between">
+            <div class="flex">
+              <input class="mr-5 h-8 w-8" type="radio" name="method" id="metric" checked>
+              <label class="font-regular font-bold text-gunmetal text-base leading-normal self-center" for="metric">Metric</label>
+            </div>
+            <div class="flex">
+              <input class="mr-5 h-8 w-8" type="radio" name="method" id="imperial">
+              <label class="font-regular font-bold text-gunmetal text-base leading-normal self-center" for="imperial">Imperial</label>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col">
+              <label class="self-start font-regular font-thin text-sm text-dark-electric-blue mb-2" for="height">Height</label>
+              <div class="flex justify-between px-4 w-full rounded-xl h-17 border-2 border-black">
+                <input class="border-2 self-center" type="number" id="height" placeholder="0" >
+                <span class="self-center">cm</span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <label class="self-start font-regular font-thin text-sm text-dark-electric-blue mb-2" for="weight">Weight</label>
+              <input class="border-2 w-full" type="number" id="weight">
+            </div>
+          </div>
+
+          <!-- Score -->
+          <div class="flex flex-col gap-6 p-8 border-2 border-black text-left text-white bg-blue rounded-2xl">
+            <p class="font-semibold font-regular text-base">Your BMI is...</p>
+            <h3 class="font-inter-semibold font-semibold text-5xl">23.4</h3>
+            <p class="text-base font-regular font-light">Your BMI suggests you're a healthy weight. Your ideal
+              weight is between <span class="font-semibold">63.3kgs - 85.2kgs</span>
+            </p>
+          </div>
+          
+          <!-- <input class="mr-5" type="radio" name="method" id="metric" checked>
+          <label for="metric">Metric</label>
+          
+          
+          <input class="mr-5" type="radio" name="method" id="imperial">
+          <label for="imperial">Imperial</label>
+
+          <label for="height">Height</label>
+          <input type="number" id="height"> -->
+          
+        </form>
+    </section>
+
+    <!-- Body Mass Index Calculator
+
   
-  <title>Frontend Mentor | Body Mass Index Calculator</title>
-</head>
 
-<!-- npx tailwindcss -i ./starter-code/input.css -o ./starter-code/output.css --watch -->
-
-<body class="font-inter-semibold">
-
-  <div class="w-[200px] font-inter-semibold">
-    <h1 class="text-heading-xl">Hello My name is Mukarram</h1>
-  </div>
-  <div class="w-[200px]">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat repellendus eveniet provident adipisci quod odit amet perferendis! Id quos dicta fuga, tenetur soluta praesentium quis dolor accusamus. Laudantium, animi sed?</p>
-  </div>
-
-  <!-- Body Mass Index Calculator
-
-  Better understand your weight in relation to your height using our 
-  body mass index (BM) calculator. While BMI is not the sole determinant 
-  of a healthy weight, it offers a valuable starting point to evaluate 
-  your overall health and well-being.
-
-  Enter your details below
+  
 
   Metric
   Imperial
@@ -38,12 +103,14 @@
 
   Your BMI is... -->
 
-  <!-- add score -->
+    <!-- add score -->
 
-  <!--Your BMI suggests you're --> <!-- add classification -->
-  <!--Your ideal weight is between --> <!-- add range -->
+    <!--Your BMI suggests you're -->
+    <!-- add classification -->
+    <!--Your ideal weight is between -->
+    <!-- add range -->
 
-  <!-- What your BMI result means
+    <!-- What your BMI result means
 
   A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a 
   healthy weight may lower your chances of experiencing health issues later on, 
@@ -91,6 +158,5 @@
   Certain health concerns may affect individuals of some Black and Asian origins at 
   lower BMIs than others. To learn more, it is advised to discuss this with your 
   GP or practice nurse. -->
-
-</body>
+  </body>
 </html>
