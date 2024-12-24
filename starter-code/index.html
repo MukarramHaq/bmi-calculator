@@ -39,11 +39,11 @@
         overall health and well-being.
       </p>
       <!-- Calculator -->
-      <div class="p-6 rounded-2xl bg-white shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1)]">
-        <h2 class="text-2xl text-gunmetal justify-self-start font-inter-semibold font-semibold mb-6">Enter your details below</h2>
+      <div class="p-6 rounded-2xl bg-white shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1)] md:p-8">
+        <h2 class="text-2xl text-gunmetal justify-self-start font-inter-semibold font-semibold mb-6 md:mb-8">Enter your details below</h2>
         <form class="flex flex-col gap-6">
 
-          <div class="flex gap-6 justify-between">
+          <div class="flex gap-6 justify-between md:justify-evenly">
             <div class="flex">
               <input id="metric-option" class="mr-5 h-8 w-8" type="radio" name="method" id="metric" checked>
               <label class="font-regular font-bold text-gunmetal text-base leading-normal self-center" for="metric">Metric</label>
@@ -55,8 +55,8 @@
           </div>
 
           <!-- Metric -->
-          <div class="metric">
-            <div class="flex flex-col gap-4">
+          <div class="metric md:mb-8">
+            <div class="flex flex-col gap-4 md:flex-row md:gap-6">
               <div class="flex flex-col">
                 <label class="self-start font-regular font-thin text-sm text-dark-electric-blue mb-2" for="height">Height</label>
                 <div class="flex justify-between px-4 w-full rounded-xl h-17 border-[1px] border-black">
@@ -76,7 +76,7 @@
 
           <!-- Imperial -->
           
-            <div id="imperial" class="hidden flex flex-col gap-4">
+            <div id="imperial" class="hidden flex flex-col gap-4 md:gap-6">
               <div class="flex flex-col">
                 <label class="self-start font-regular font-thin text-sm text-dark-electric-blue mb-2" for="height">Height</label>
                 <div class="flex gap-4">
@@ -106,18 +106,22 @@
             </div>
 
           <!-- Score: Metric -->
-          <div class="metric-table flex flex-col gap-6 p-8 text-left text-white bg-blue rounded-2xl">
-            <p class="font-semibold font-regular text-base">Your BMI is...</p>
-            <h3 class="bmi-score-metric font-inter-semibold font-semibold text-5xl">0</h3>
-            <p class="text-base font-regular font-light">Your BMI suggests <span class="weight-category-metric">a healthy weight.</span>
+          <div class="metric-table flex flex-col gap-6 p-8 text-left text-white bg-blue rounded-2xl md:rounded-r-full md:flex-row md:justify-between">
+            <div>
+              <p class="font-semibold font-regular text-base md:mb-2">Your BMI is...</p>
+              <h3 class="bmi-score-metric font-inter-semibold font-semibold text-5xl">0</h3>
+            </div>
+            <p class="text-base font-regular font-light md:self-center md:w-64">Your BMI suggests <span class="weight-category-metric">a healthy weight.</span>
           </p>
-        </div>
+          </div>
 
           <!-- Score: Imperial -->
-          <div class="imperial-table hidden flex-col gap-6 p-8 text-left text-white bg-blue rounded-2xl">
-            <p class="font-semibold font-regular text-base">Your BMI is...</p>
-            <h3 class="bmi-score-imperial font-inter-semibold font-semibold text-5xl">0</h3>
-            <p class="text-base font-regular font-light">Your BMI suggests <span class="weight-category-imperial">a healthy weight.</span>
+          <div class="imperial-table hidden flex-col gap-6 p-8 text-left text-white bg-blue rounded-2xl md:rounded-r-full md:mt-8 md:flex-row md:justify-between">
+            <div>
+              <p class="font-semibold font-regular text-base md:mb-2">Your BMI is...</p>
+              <h3 class="bmi-score-imperial font-inter-semibold font-semibold text-5xl">0</h3>
+            </div>
+            <p class="text-base font-regular font-light md:self-center md:w-64">Your BMI suggests <span class="weight-category-imperial">a healthy weight.</span>
             </p>
           </div>
         </form>
@@ -126,10 +130,10 @@
     <main class="mb-24">
       <!-- BMI Result Meaning -->
       <section class="mb-20">
-        <div>
-          <img class="mb-12 z-50" src="./assets/images/image-man-eating.webp" alt="man eating healthy sushi">
-          <div class="px-4">
-            <h2 class="font-inter-semibold font-medium text-3xl text-gunmetal leading-none mb-8">What your BMI result means</h2>
+        <div class="md:max-w-[760px] md:flex md:gap-3">
+          <img class="mb-12 z-50 md:h-96 md:m-0 md:self-start md:relative md:-left-20" src="./assets/images/image-man-eating.webp" alt="man eating healthy sushi">
+          <div class="px-4 md:max-w-80 md:p-0 md:flex md:flex-col md:justify-center">
+            <h2 class="font-inter-semibold font-medium text-3xl text-gunmetal leading-none mb-8 md:font-bold">What your BMI result means</h2>
             <p class="font-regular font-thin text-base text-dark-electric-blue leading-6">
               A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a 
               healthy weight may lower your chances of experiencing health issues later on, 
@@ -142,35 +146,41 @@
         </div>
       </section>
 
-      <section class="bg-black bg-gradient-to-br from-[#D6E6FE] to-[#D6FCFE] py-14 px-4 mb-16">
-        <div class="mb-10">
-          <img class="mb-8" src="./assets/images/icon-eating.svg" alt="icon of eating healthy">
-          <h2 class="mb-6 text-2xl text-gunmetal font-inter-semibold font-medium leading-[1.1]">Healthy eating</h2>
-          <p class="text-base text-dark-electric-blue font-regular font-light leading-normal pr-4">
-            Healthy eating promotes weight control, disease prevention, better digestion, 
-            immunity, mental clarity, and mood.
-          </p>
+      <section class="bg-black bg-gradient-to-br from-[#D6E6FE] to-[#D6FCFE] py-14 px-4 mb-16 md:px-10 md:py-[60px]">
+        <div class="md:flex gap-10 md:mb-10">
+          <img class="mb-8 md:m-0" src="./assets/images/icon-eating.svg" alt="icon of eating healthy">
+          <div class="mb-10 md:m-0">
+            <h2 class="mb-6 text-2xl text-gunmetal font-inter-semibold font-medium leading-[1.1] md:font-bold">Healthy eating</h2>
+            <p class="text-base text-dark-electric-blue font-regular font-light leading-normal pr-4">
+              Healthy eating promotes weight control, disease prevention, better digestion,
+              immunity, mental clarity, and mood.
+            </p>
+          </div>
         </div>
-        <div class="mb-10">
-          <img class="mb-8" src="./assets/images/icon-exercise.svg" alt="icon of exercise">
-          <h2 class="mb-6 text-2xl text-gunmetal font-inter-semibold font-medium leading-[1.1]">Healthy eating</h2>
-          <p class="text-base text-dark-electric-blue font-regular font-light leading-normal pr-6">
-            Exercise improves fitness, aids weight control, elevates mood, and reduces disease 
-            risk, fostering wellness and longevity.
-          </p>
+        <div class="mb-10 md:flex md:gap-10">
+          <img class="mb-8 md:m-0" src="./assets/images/icon-exercise.svg" alt="icon of exercise">
+          <div class="md:self-center">
+            <h2 class="mb-6 text-2xl text-gunmetal font-inter-semibold font-medium leading-[1.1] md:font-bold">Regular Exercise</h2>
+            <p class="text-base text-dark-electric-blue font-regular font-light leading-normal pr-6">
+              Exercise improves fitness, aids weight control, elevates mood, and reduces disease
+              risk, fostering wellness and longevity.
+            </p>
+          </div>
         </div>
-        <div>
-          <img class="mb-8" src="./assets/images/icon-sleep.svg" alt="icon of sleep">
-          <h2 class="mb-6 text-2xl text-gunmetal font-inter-semibold font-medium leading-[1.1]">Adequate Sleep</h2>
-          <p class="text-base text-dark-electric-blue font-regular font-light leading-normal pr-4">
-            Sleep enhances mental clarity, emotional stability, and physical wellness, promoting 
-            overall restoration and rejuvenation.
-          </p>
+        <div class="mb-10 md:m-0 md:flex md:gap-10">
+          <img class="mb-8 md:m-0" src="./assets/images/icon-sleep.svg" alt="icon of sleep">
+          <div>
+            <h2 class="mb-6 text-2xl text-gunmetal font-inter-semibold font-medium leading-[1.1] md:font-bold">Adequate Sleep</h2>
+            <p class="text-base text-dark-electric-blue font-regular font-light leading-normal pr-4">
+              Sleep enhances mental clarity, emotional stability, and physical wellness, promoting
+              overall restoration and rejuvenation.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section class="grid grid-col-1 px-4 gap-4">
-        <div class="mb-14">
+      <section class="flex flex-col px-4 gap-4">
+        <div class="mb-14 md:max-w-[686px] self-center">
           <h2 class="font-inter-semibold font-medium text-3xl text-gunmetal leading-none mb-8 text-center">Limitations of BMI</h2>
           <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 text-center">
             Although BMI is often a practical indicator of healthy weight, it is not suited for 
@@ -178,57 +188,59 @@
             certain cases, the measurement may not be beneficial to use.
           </p>
         </div>
-        <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)]">
-          <div class="flex gap-4">
-            <img src="./assets/images/icon-gender.svg" alt="icon of gender">
-            <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Gender</h3>
+        <div class="grid grid-col-1 gap-6 md:grid-cols-2 md:gap-6">
+          <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)]">
+            <div class="flex gap-4">
+              <img src="./assets/images/icon-gender.svg" alt="icon of gender">
+              <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Gender</h3>
+            </div>
+            <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
+              The development and body fat composition of girls and boys vary with age. Consequently,
+              a child's age and gender are considered when evaluating their BMI.
+            </p>
           </div>
-          <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
-            The development and body fat composition of girls and boys vary with age. Consequently, 
-            a child's age and gender are considered when evaluating their BMI.
-          </p>
-        </div>
-        <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)]">
-          <div class="flex gap-4">
-            <img src="./assets/images/icon-age.svg" alt="icon of birthday cake">
-            <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Age</h3>
+          <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)]">
+            <div class="flex gap-4">
+              <img src="./assets/images/icon-age.svg" alt="icon of birthday cake">
+              <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Age</h3>
+            </div>
+            <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
+              In aging individuals, increased body fat and muscle loss may cause BMI to underestimate
+              body fat content.
+            </p>
           </div>
-          <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
-            In aging individuals, increased body fat and muscle loss may cause BMI to underestimate 
-            body fat content.
-          </p>
-        </div>
-        <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)]">
-          <div class="flex gap-4">
-            <img src="./assets/images/icon-muscle.svg" alt="icon of a muscle flex">
-            <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Muscle</h3>
+          <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)]">
+            <div class="flex gap-4">
+              <img src="./assets/images/icon-muscle.svg" alt="icon of a muscle flex">
+              <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Muscle</h3>
+            </div>
+            <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
+              BMI may misclassify muscular individuals as overweight or obese, as it doesn't
+              differentiate muscle from fat.
+            </p>
           </div>
-          <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
-            BMI may misclassify muscular individuals as overweight or obese, as it doesn't 
-            differentiate muscle from fat.
-          </p>
-        </div>
-        <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)]">
-          <div class="flex gap-4">
-            <img src="./assets/images/icon-pregnancy.svg" alt="icon of gender">
-            <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Pregnancy</h3>
+          <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)]">
+            <div class="flex gap-4">
+              <img src="./assets/images/icon-pregnancy.svg" alt="icon of gender">
+              <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Pregnancy</h3>
+            </div>
+            <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
+              Expectant mothers experience weight gain due to their growing baby. Maintaining a
+              healthy pre-pregnancy BMI is advisable to minimise health risks for both mother
+              and child.
+            </p>
           </div>
-          <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
-            Expectant mothers experience weight gain due to their growing baby. Maintaining a 
-            healthy pre-pregnancy BMI is advisable to minimise health risks for both mother 
-            and child.
-          </p>
-        </div>
-        <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)]">
-          <div class="flex gap-4">
-            <img src="./assets/images/icon-race.svg" alt="icon of gender">
-            <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Race</h3>
+          <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)] md:col-start-1 md:col-end-3 md:w-1/2 md:justify-self-center">
+            <div class="flex gap-4">
+              <img src="./assets/images/icon-race.svg" alt="icon of gender">
+              <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Race</h3>
+            </div>
+            <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
+              Certain health concerns may affect individuals of some Black and Asian origins at
+              lower BMIs than others. To learn more, it is advised to discuss this with your
+              GP or practice nurse.
+            </p>
           </div>
-          <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
-            Certain health concerns may affect individuals of some Black and Asian origins at 
-            lower BMIs than others. To learn more, it is advised to discuss this with your 
-            GP or practice nurse.
-          </p>
         </div>
       </section>
 
