@@ -2,12 +2,6 @@
 module.exports = {
   content: ["./starter-code/**/*.{html,js}"],
   theme: {
-    colors: {
-      white: '#FFFFFF',
-      blue: '#345FF6',
-      gunmetal: '#253347',
-      'dark-electric-blue': '#5E6E85'
-    },
     fontFamily: {
       'regular': 'Inter-Regular, sans-serif',
       'inter-semibold': 'Inter-SemiBold, sans-serif',
@@ -25,7 +19,13 @@ module.exports = {
       },
       width: {
         'logo-sm': '36.72px'
-      }
+      },
+      colors: {
+        white: '#FFFFFF',
+        blue: '#345FF6',
+        gunmetal: '#253347',
+        'dark-electric-blue': '#5E6E85'
+      },
     },
   },
   plugins: [],
