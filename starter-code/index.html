@@ -38,45 +38,88 @@
         healthy weight, it offers a valuable starting point to evaluate your
         overall health and well-being.
       </p>
-      <!-- Calculator: add a box shadow over here -->
+      <!-- Calculator -->
       <div class="p-6 rounded-2xl bg-white shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1)]">
         <h2 class="text-2xl text-gunmetal justify-self-start font-inter-semibold font-semibold mb-6">Enter your details below</h2>
         <form class="flex flex-col gap-6">
 
           <div class="flex gap-6 justify-between">
             <div class="flex">
-              <input class="mr-5 h-8 w-8" type="radio" name="method" id="metric" checked>
+              <input id="metric-option" class="mr-5 h-8 w-8" type="radio" name="method" id="metric" checked>
               <label class="font-regular font-bold text-gunmetal text-base leading-normal self-center" for="metric">Metric</label>
             </div>
             <div class="flex">
-              <input class="mr-5 h-8 w-8" type="radio" name="method" id="imperial">
+              <input id="imperial-option" class="mr-5 h-8 w-8" type="radio" name="method" id="imperial">
               <label class="font-regular font-bold text-gunmetal text-base leading-normal self-center" for="imperial">Imperial</label>
             </div>
           </div>
 
-          <div class="flex flex-col gap-4">
-            <div class="flex flex-col">
-              <label class="self-start font-regular font-thin text-sm text-dark-electric-blue mb-2" for="height">Height</label>
-              <div class="flex justify-between px-4 w-full rounded-xl h-17 border-[1px] border-black">
-                <input class="self-center outline-none text-2xl font-inter-semibold font-semibold w-full" type="number" id="height" placeholder="0" >
-                <span class="self-center text-2xl text-blue font-inter-semibold font-semibold">cm</span>
+          <!-- Metric -->
+          <div class="metric">
+            <div class="flex flex-col gap-4">
+              <div class="flex flex-col">
+                <label class="self-start font-regular font-thin text-sm text-dark-electric-blue mb-2" for="height">Height</label>
+                <div class="flex justify-between px-4 w-full rounded-xl h-17 border-[1px] border-black">
+                  <input class="metric-height self-center outline-none text-gunmetal text-2xl font-inter-semibold font-semibold w-full" type="number" id="height" placeholder="0" >
+                  <span class="self-center text-2xl text-blue font-inter-semibold font-semibold">cm</span>
+                </div>
               </div>
-            </div>
-            <div class="flex flex-col">
-              <label class="self-start font-regular font-thin text-sm text-dark-electric-blue mb-2" for="weight">Weight</label>
-              <div class="flex justify-between px-4 w-full rounded-xl h-17 border-[1px] border-black">
-                <input class="self-center outline-none text-2xl font-inter-semibold font-semibold w-full" type="number" id="weight" placeholder="0" >
-                <span class="self-center text-2xl text-blue font-inter-semibold font-semibold">kg</span>
+              <div class="flex flex-col">
+                <label class="self-start font-regular font-thin text-sm text-dark-electric-blue mb-2" for="weight">Weight</label>
+                <div class="flex justify-between px-4 w-full rounded-xl h-17 border-[1px] border-black">
+                  <input class="metric-weight self-center outline-none text-2xl font-inter-semibold font-semibold w-full" type="number" id="weight" placeholder="0" >
+                  <span class="self-center text-2xl text-blue font-inter-semibold font-semibold">kg</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Score -->
-          <div class="flex flex-col gap-6 p-8 text-left text-white bg-blue rounded-2xl">
+          <!-- Imperial -->
+          
+            <div id="imperial" class="hidden flex flex-col gap-4">
+              <div class="flex flex-col">
+                <label class="self-start font-regular font-thin text-sm text-dark-electric-blue mb-2" for="height">Height</label>
+                <div class="flex gap-4">
+                  <div class="flex justify-between px-4 w-full rounded-xl h-17 border-[1px] border-black">
+                    <input class="imperial-height-feet self-center outline-none text-2xl font-inter-semibold font-semibold w-full" type="number" id="height" placeholder="0" >
+                    <span class="self-center text-2xl text-blue font-inter-semibold font-semibold">ft</span>
+                  </div>
+                  <div class="flex justify-between px-4 w-full rounded-xl h-17 border-[1px] border-black">
+                    <input class="imperial-height-inches self-center outline-none text-2xl font-inter-semibold font-semibold w-full" type="number" id="height" placeholder="0" >
+                    <span class="self-center text-2xl text-blue font-inter-semibold font-semibold">in</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <label class="self-start font-regular font-thin text-sm text-dark-electric-blue mb-2" for="height">Weight</label>
+                <div class="flex gap-4">
+                  <div class="flex justify-between px-4 w-full rounded-xl h-17 border-[1px] border-black">
+                    <input class="imperial-weight-st self-center outline-none text-2xl font-inter-semibold font-semibold w-full" type="number" id="height" placeholder="0" >
+                    <span class="self-center text-2xl text-blue font-inter-semibold font-semibold">st</span>
+                  </div>
+                  <div class="flex justify-between px-4 w-full rounded-xl h-17 border-[1px] border-black">
+                    <input class="imperial-weight-lb self-center outline-none text-2xl font-inter-semibold font-semibold w-full" type="number" id="height" placeholder="0" >
+                    <span class="self-center text-2xl text-blue font-inter-semibold font-semibold">lbs</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <!-- Score: Metric -->
+          <div class="metric-table flex flex-col gap-6 p-8 text-left text-white bg-blue rounded-2xl">
             <p class="font-semibold font-regular text-base">Your BMI is...</p>
-            <h3 class="font-inter-semibold font-semibold text-5xl">23.4</h3>
+            <h3 class="bmi-score-metric font-inter-semibold font-semibold text-5xl">0</h3>
             <p class="text-base font-regular font-light">Your BMI suggests you're a healthy weight. Your ideal
-              weight is between <span class="font-semibold">63.3kgs - 85.2kgs</span>
+              weight is between <span class="weight-score-metric font-semibold"></span>
+            </p>
+          </div>
+
+          <!-- Score: Imperial -->
+          <div class="imperial-table hidden flex-col gap-6 p-8 text-left text-white bg-blue rounded-2xl">
+            <p class="font-semibold font-regular text-base">Your BMI is...</p>
+            <h3 class="bmi-score-imperial font-inter-semibold font-semibold text-5xl">0</h3>
+            <p class="text-base font-regular font-light">Your BMI suggests you're a healthy weight. Your ideal
+              weight is between <span class="weight-score-imperial font-semibold"></span>
             </p>
           </div>
         </form>
@@ -192,75 +235,6 @@
       </section>
 
     </main>
-
-    <!-- Body Mass Index Calculator
-
-  
-
-  
-
-  Metric
-  Imperial
-
-  Height
-  Weight
-
-  Your BMI is... -->
-
-    <!-- add score -->
-
-    <!--Your BMI suggests you're -->
-    <!-- add classification -->
-    <!--Your ideal weight is between -->
-    <!-- add range -->
-
-    <!-- What your BMI result means
-
-  A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a 
-  healthy weight may lower your chances of experiencing health issues later on, 
-  such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced 
-  fat and sugar content, incorporating ample fruits and vegetables. Additionally, 
-  strive for regular physical activity, ideally about 30 minutes daily for 
-  five days a week.
-
-  Healthy eating
-  Healthy eating promotes weight control, disease prevention, better digestion, 
-  immunity, mental clarity, and mood.
-
-  Regular exercise
-  Exercise improves fitness, aids weight control, elevates mood, and reduces disease 
-  risk, fostering wellness and longevity.
-
-  Adequate sleep
-  Sleep enhances mental clarity, emotional stability, and physical wellness, promoting 
-  overall restoration and rejuvenation.
-
-  Limitations of BMI
-
-  Although BMI is often a practical indicator of healthy weight, it is not suited for 
-  every person. Specific groups should carefully consider their BMI outcomes, and in 
-  certain cases, the measurement may not be beneficial to use.
-
-  Gender
-  The development and body fat composition of girls and boys vary with age. Consequently, 
-  a child's age and gender are considered when evaluating their BMI.
-
-  Age
-  In aging individuals, increased body fat and muscle loss may cause BMI to underestimate 
-  body fat content.
-
-  Muscle
-  BMI may misclassify muscular individuals as overweight or obese, as it doesn't 
-  differentiate muscle from fat.
-
-  Pregnancy
-  Expectant mothers experience weight gain due to their growing baby. Maintaining a 
-  healthy pre-pregnancy BMI is advisable to minimise health risks for both mother 
-  and child.
-
-  Race
-  Certain health concerns may affect individuals of some Black and Asian origins at 
-  lower BMIs than others. To learn more, it is advised to discuss this with your 
-  GP or practice nurse. -->
+    <script src="index.js"></script>
   </body>
 </html>
