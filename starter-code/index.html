@@ -16,9 +16,9 @@
   </head>
 
   <!-- npx tailwindcss -i ./starter-code/input.css -o ./starter-code/output.css --watch -->
-
-  <body class="font-inter-semibold flex flex-col justify-center items-center min-h-svh lg:p-[140px]">
-    <header class="flex justify-center p-4 lg:w-full lg:justify-start border-2 border-black">
+<!-- lg:p-[140px] -->
+  <body class="font-inter-semibold flex flex-col justify-center items-center min-h-svh lg:px-[140px]">
+    <header class="flex justify-center p-4 lg:w-full lg:justify-start">
       <!-- <div class="min-w-full min-h-[640px] bg-gradient-to-br from-indigo-500 to-blue-500 lg:relative -z-50"></div> -->
       <img
         class="h-logo-sm w-logo-sm lg:h-logo-lg lg:w-logo-lg"
@@ -29,8 +29,8 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="text-center mt-6 mb-20 p-4 lg:flex lg:justify-between lg:gap-8 lg:text-left border-2 border-black lg:self-start lg:w-full">
-      <div class="max-w-[564px] border-2 border-black lg:self-center">
+    <section class="text-center mt-6 mb-20 p-4 lg:flex lg:justify-between lg:gap-8 lg:text-left lg:self-start lg:w-full">
+      <div class="max-w-[564px] lg:self-center">
         <h1 class="text-5xl text-gunmetal font-inter-semibold font-semibold mb-6 lg:text-heading-xl lg:leading-[1.1]">
           Body Mass Index Calculator
         </h1>
@@ -43,7 +43,7 @@
       </div>
       <!-- Calculator -->
       <div class="lg:max-w-[564px]">
-        <div class="p-6 rounded-2xl bg-white shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1)] md:p-8 border-2 border-black">
+        <div class="p-6 rounded-2xl bg-white shadow-[0px_10px_15px_-3px_rgba(0,_0,_0,_0.1)] md:p-8">
           <h2 class="text-2xl text-gunmetal justify-self-start font-inter-semibold font-semibold mb-6 md:mb-8">Enter your details below</h2>
           <form class="flex flex-col gap-6">
             <div class="flex gap-6 justify-between md:justify-evenly">
@@ -127,13 +127,13 @@
       </div>
     </section>
 
-    <main class="mb-24">
+    <main class="mb-24 border-2 border-black">
       <!-- BMI Result Meaning -->
       <section class="mb-20">
-        <div class="md:max-w-[760px] md:flex md:gap-3">
-          <img class="mb-12 z-50 md:h-96 md:m-0 md:self-start md:relative md:-left-20" src="./assets/images/image-man-eating.webp" alt="man eating healthy sushi">
-          <div class="px-4 md:max-w-80 md:p-0 md:flex md:flex-col md:justify-center">
-            <h2 class="font-inter-semibold font-medium text-3xl text-gunmetal leading-none mb-8 md:font-bold">What your BMI result means</h2>
+        <div class="md:min-w-[760px] md:flex md:gap-3 lg:flex lg:gap-[131px]">
+          <img class="mb-12 z-50 md:h-96 md:m-0 md:self-start md:relative md:-left-20 lg:static lg:w-[564px] lg:h-[533px]" src="./assets/images/image-man-eating.webp" alt="man eating healthy sushi">
+          <div class="px-4 md:max-w-80 md:p-0 md:flex md:flex-col md:justify-center lg:min-w-[465px] lg:self-center">
+            <h2 class="font-inter-semibold font-medium text-3xl text-gunmetal leading-none mb-8 md:font-bold lg:text-5xl lg:font-normal">What your BMI result means</h2>
             <p class="font-regular font-thin text-base text-dark-electric-blue leading-6">
               A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a 
               healthy weight may lower your chances of experiencing health issues later on, 

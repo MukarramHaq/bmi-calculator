@@ -22,6 +22,9 @@ module.exports = {
         'logo-sm': '36.72px',
         'logo-lg': '58.75px'
       },
+      margin: {
+        'lg-margin': '140px'
+      },
       colors: {
         white: '#FFFFFF',
         blue: '#345FF6',
