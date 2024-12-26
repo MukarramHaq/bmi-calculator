@@ -15,10 +15,12 @@ module.exports = {
       },
       height: {
         'logo-sm': '36.72px',
-        17: '69px'
+        17: '69px',
+        'logo-lg': '58.75px'
       },
       width: {
-        'logo-sm': '36.72px'
+        'logo-sm': '36.72px',
+        'logo-lg': '58.75px'
       },
       colors: {
         white: '#FFFFFF',
