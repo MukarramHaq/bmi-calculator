@@ -17,19 +17,18 @@
 
   <!-- npx tailwindcss -i ./starter-code/input.css -o ./starter-code/output.css --watch -->
 <!-- lg:p-[140px] -->
-  <body class="font-inter-semibold flex flex-col justify-center items-center min-h-svh lg:px-[140px]">
-    <header class="flex justify-center p-4 lg:w-full lg:justify-start">
-      <!-- <div class="min-w-full min-h-[640px] bg-gradient-to-br from-indigo-500 to-blue-500 lg:relative -z-50"></div> -->
+  <body class="font-inter-semibold flex flex-col justify-center items-center min-h-svh lg:absolute">
+    <!-- <div class="sm:hidden lg:block lg:min-w-[978px] min-h-[640px] bg-gradient-to-br from-indigo-500 to-blue-500 lg:self-start lg:ml-6 z-[99999] lg:relative lg:top-40"></div> -->
+    <header class="flex justify-center p-4 lg:w-full lg:justify-start lg:px-[140px]">
       <img
         class="h-logo-sm w-logo-sm lg:h-logo-lg lg:w-logo-lg"
         src="./assets/images/logo.svg"
         alt="logo of the company"
       />
-      
     </header>
 
     <!-- Hero Section -->
-    <section class="text-center mt-6 mb-20 p-4 lg:flex lg:justify-between lg:gap-8 lg:text-left lg:self-start lg:w-full">
+    <section class="text-center mt-6 mb-20 p-4 lg:flex lg:justify-between lg:gap-8 lg:text-left lg:self-start lg:w-full lg:px-[140px]">
       <div class="max-w-[564px] lg:self-center">
         <h1 class="text-5xl text-gunmetal font-inter-semibold font-semibold mb-6 lg:text-heading-xl lg:leading-[1.1]">
           Body Mass Index Calculator
@@ -127,11 +126,11 @@
       </div>
     </section>
 
-    <main class="mb-24 border-2 border-black">
+    <main class="mb-24 lg:px-6">
       <!-- BMI Result Meaning -->
       <section class="mb-20">
-        <div class="md:min-w-[760px] md:flex md:gap-3 lg:flex lg:gap-[131px]">
-          <img class="mb-12 z-50 md:h-96 md:m-0 md:self-start md:relative md:-left-20 lg:static lg:w-[564px] lg:h-[533px]" src="./assets/images/image-man-eating.webp" alt="man eating healthy sushi">
+        <div class="md:min-w-[760px] md:flex md:gap-3 lg:gap-[131px] lg:justify-evenly">
+          <img class="mb-12 z-50 md:h-96 md:m-0 md:self-start md:relative md:-left-20 lg:static lg:min-w-[564px] lg:min-h-[533px]" src="./assets/images/image-man-eating.webp" alt="man eating healthy sushi">
           <div class="px-4 md:max-w-80 md:p-0 md:flex md:flex-col md:justify-center lg:min-w-[465px] lg:self-center">
             <h2 class="font-inter-semibold font-medium text-3xl text-gunmetal leading-none mb-8 md:font-bold lg:text-5xl lg:font-normal">What your BMI result means</h2>
             <p class="font-regular font-thin text-base text-dark-electric-blue leading-6">
@@ -146,32 +145,32 @@
         </div>
       </section>
 
-      <section class="bg-black bg-gradient-to-br from-[#D6E6FE] to-[#D6FCFE] py-14 px-4 mb-16 md:px-10 md:py-[60px]">
-        <div class="md:flex gap-10 md:mb-10">
-          <img class="mb-8 md:m-0" src="./assets/images/icon-eating.svg" alt="icon of eating healthy">
+      <section class="bg-gradient-to-br from-[#D6E6FE] to-[#D6FCFE] py-14 px-4 mb-16 md:px-10 md:py-[60px] lg:pl-[180px] lg:flex lg:gap-28 lg:rounded-[35px]">
+        <div class="md:flex gap-10 md:mb-10 lg:flex-col">
+          <img class="mb-8 md:m-0 lg:h-16 lg:w-16" src="./assets/images/icon-eating.svg" alt="icon of eating healthy">
           <div class="mb-10 md:m-0">
             <h2 class="mb-6 text-2xl text-gunmetal font-inter-semibold font-medium leading-[1.1] md:font-bold">Healthy eating</h2>
-            <p class="text-base text-dark-electric-blue font-regular font-light leading-normal pr-4">
+            <p class="text-base text-dark-electric-blue font-regular font-light leading-normal pr-4 lg:w-[365px]">
               Healthy eating promotes weight control, disease prevention, better digestion,
               immunity, mental clarity, and mood.
             </p>
           </div>
         </div>
-        <div class="mb-10 md:flex md:gap-10">
-          <img class="mb-8 md:m-0" src="./assets/images/icon-exercise.svg" alt="icon of exercise">
+        <div class="mb-10 md:flex md:gap-10 lg:flex-col">
+          <img class="mb-8 md:m-0 lg:h-16 lg:w-16" src="./assets/images/icon-exercise.svg" alt="icon of exercise">
           <div class="md:self-center">
             <h2 class="mb-6 text-2xl text-gunmetal font-inter-semibold font-medium leading-[1.1] md:font-bold">Regular Exercise</h2>
-            <p class="text-base text-dark-electric-blue font-regular font-light leading-normal pr-6">
+            <p class="text-base text-dark-electric-blue font-regular font-light leading-normal pr-6 lg:w-[365px]">
               Exercise improves fitness, aids weight control, elevates mood, and reduces disease
               risk, fostering wellness and longevity.
             </p>
           </div>
         </div>
-        <div class="mb-10 md:m-0 md:flex md:gap-10">
-          <img class="mb-8 md:m-0" src="./assets/images/icon-sleep.svg" alt="icon of sleep">
-          <div>
+        <div class="mb-10 md:m-0 md:flex md:gap-10 lg:flex-col">
+          <img class="mb-8 md:m-0 lg:w-16 lg:h-16" src="./assets/images/icon-sleep.svg" alt="icon of sleep">
+          <div class="">
             <h2 class="mb-6 text-2xl text-gunmetal font-inter-semibold font-medium leading-[1.1] md:font-bold">Adequate Sleep</h2>
-            <p class="text-base text-dark-electric-blue font-regular font-light leading-normal pr-4">
+            <p class="text-base text-dark-electric-blue font-regular font-light leading-normal pr-4 lg:w-[365px]">
               Sleep enhances mental clarity, emotional stability, and physical wellness, promoting
               overall restoration and rejuvenation.
             </p>
@@ -179,9 +178,10 @@
         </div>
       </section>
 
-      <section class="flex flex-col px-4 gap-4">
+      <!-- Limitations of BMI -->
+      <section class="flex flex-col px-4 gap-4 lg:hidden">
         <div class="mb-14 md:max-w-[686px] self-center">
-          <h2 class="font-inter-semibold font-medium text-3xl text-gunmetal leading-none mb-8 text-center">Limitations of BMI</h2>
+          <h2 class="font-inter-semibold font-medium text-3xl text-gunmetal leading-none mb-8 text-center lg:text-5xl lg:font-bold">Limitations of BMI</h2>
           <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 text-center">
             Although BMI is often a practical indicator of healthy weight, it is not suited for 
             every person. Specific groups should carefully consider their BMI outcomes, and in 
@@ -189,7 +189,7 @@
           </p>
         </div>
         <div class="grid grid-col-1 gap-6 md:grid-cols-2 md:gap-6">
-          <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)]">
+          <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)] lg:min-w-[365px]">
             <div class="flex gap-4">
               <img src="./assets/images/icon-gender.svg" alt="icon of gender">
               <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Gender</h3>
@@ -240,6 +240,82 @@
               lower BMIs than others. To learn more, it is advised to discuss this with your
               GP or practice nurse.
             </p>
+          </div>
+        </div>
+
+      </section>
+      <section class="sm:hidden md:hidden lg:mx-[140px] lg:px-[40px] lg:flex">
+        <div class="mb-14 md:max-w-[686px] lg:absolute lg:self-start">
+          <div class="lg:flex lg:flex-col lg:gap-16">
+            <div>
+              <h2 class="font-inter-semibold font-medium text-3xl text-gunmetal leading-none mb-8 text-center lg:text-left lg:text-5xl lg:font-bold">Limitations of BMI</h2>
+              <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 text-center lg:text-left lg:w-[564px]">
+                Although BMI is often a practical indicator of healthy weight, it is not suited for
+                every person. Specific groups should carefully consider their BMI outcomes, and in
+                certain cases, the measurement may not be beneficial to use.
+              </p>
+            </div>
+            <img class="lg:self-center lg:relative lg:right-40 lg:top-10" src="./assets/images/pattern-curved-line-right.svg" alt="">
+          </div>
+        </div>
+        <div class="lg:w-[961px] lg:flex lg:flex-col lg:gap-8 lg:relative lg:left-64">
+          <div class="lg:self-end lg:mr-[99px] lg:flex lg:flex-col">
+            <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)] lg:w-[365px]">
+              <div class="flex gap-4">
+                <img src="./assets/images/icon-gender.svg" alt="icon of gender">
+                <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Gender</h3>
+              </div>
+              <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
+                The development and body fat composition of girls and boys vary with age. Consequently,
+                a child's age and gender are considered when evaluating their BMI.
+              </p>
+            </div>
+          </div>
+          <div class="lg:flex lg:gap-8 lg:justify-end">
+            <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)] lg:w-[365px]">
+              <div class="flex gap-4">
+                <img src="./assets/images/icon-age.svg" alt="icon of birthday cake">
+                <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Age</h3>
+              </div>
+              <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
+                In aging individuals, increased body fat and muscle loss may cause BMI to underestimate
+                body fat content.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)] lg:w-[365px]">
+              <div class="flex gap-4">
+                <img src="./assets/images/icon-muscle.svg" alt="icon of a muscle flex">
+                <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Muscle</h3>
+              </div>
+              <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
+                BMI may misclassify muscular individuals as overweight or obese, as it doesn't
+                differentiate muscle from fat.
+              </p>
+            </div>
+          </div>
+          <div class="lg:flex lg:gap-8 lg:justify-start">
+            <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)] lg:w-[365px]">
+              <div class="flex gap-4">
+                <img src="./assets/images/icon-pregnancy.svg" alt="icon of gender">
+                <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Pregnancy</h3>
+              </div>
+              <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
+                Expectant mothers experience weight gain due to their growing baby. Maintaining a
+                healthy pre-pregnancy BMI is advisable to minimise health risks for both mother
+                and child.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 p-6 rounded-2xl shadow-[12px_6px_28px_15px_rgba(0,_0,_0,_0.1)] md:w-1/2 md:justify-self-center lg:justify-self-start lg:w-[365px]">
+              <div class="flex gap-4">
+                <img src="./assets/images/icon-race.svg" alt="icon of gender">
+                <h3 class="self-center font-regular font-semibold text-gunmetal text-xl leading-normal">Race</h3>
+              </div>
+              <p class="font-regular font-thin text-base text-dark-electric-blue leading-6 pr-8">
+                Certain health concerns may affect individuals of some Black and Asian origins at
+                lower BMIs than others. To learn more, it is advised to discuss this with your
+                GP or practice nurse.
+              </p>
+            </div>
           </div>
         </div>
       </section>
